@@ -1,0 +1,14 @@
+sample:
+  name: Custom GATT notify
+  description: |
+    BLE peripheral exposing a custom 128-bit GATT service with a single
+    Notify characteristic. Once a client (e.g. the nRF Connect app)
+    subscribes, an incrementing one-byte counter is notified every 3
+    seconds.
+tests:
+  sample.korlinx.gatt.build:
+    build_only: true
+    tags: bluetooth
+    platform_allow:
+      - nx15/nrf54l15/cpuapp
+      - nx40/nrf52840

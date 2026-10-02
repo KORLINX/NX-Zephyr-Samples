@@ -1,0 +1,17 @@
+#
+# Copyright (c) 2026 Korlinx
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+mainmenu "Korlinx custom GATT notify sample"
+
+config GATT_NOTIFY_INTERVAL_MS
+	int "Counter notification interval in milliseconds"
+	default 3000
+	help
+	  Period between counter notifications sent to a subscribed client.
+	  The one-byte counter also advances at this rate when nobody is
+	  subscribed.
+
+source "Kconfig.zephyr"

@@ -1,0 +1,14 @@
+# Registers this repo as a Zephyr module so its out-of-tree boards
+# (boards/korlinx/nx15, boards/korlinx/nx40) are discoverable by the build
+# system — including sysbuild — without passing -DBOARD_ROOT every time.
+#
+# To activate, make west aware of this repo as a module, e.g.:
+#   west build -b nx15/nrf54l15/cpuapp samples/<sample> -- \
+#       -DZEPHYR_EXTRA_MODULES=<abs-path-to-this-repo>
+# or add it to your west manifest. Each sample's CMakeLists also appends
+# BOARD_ROOT, so `west build --no-sysbuild -b nx15/nrf54l15/cpuapp
+# samples/<sample>` works with no extra flags.
+name: nx_zephyr_samples
+build:
+  settings:
+    board_root: .

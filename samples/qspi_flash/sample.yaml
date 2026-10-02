@@ -1,0 +1,12 @@
+sample:
+  name: P25Q32SU external flash
+  description: |
+    Erase / write / read-back and throughput test for the on-board P25Q32SU
+    NOR flash (QSPI on nx40, SPI on nx15) using the Zephyr flash API.
+tests:
+  sample.korlinx.qspi_flash:
+    build_only: true
+    tags: flash
+    platform_allow:
+      - nx15/nrf54l15/cpuapp
+      - nx40/nrf52840

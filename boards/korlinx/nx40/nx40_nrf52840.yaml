@@ -1,0 +1,22 @@
+# Copyright (c) 2026 Korlinx
+# SPDX-License-Identifier: Apache-2.0
+
+identifier: nx40/nrf52840
+name: Korlinx-NX-nRF52840
+type: mcu
+arch: arm
+ram: 256
+flash: 1024
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - adc
+  - ble
+  - gpio
+  - i2c
+  - spi
+  - usb_device
+  - usbd
+  - watchdog
+vendor: korlinx

@@ -1,0 +1,18 @@
+sample:
+  name: MSM261D3526 PDM microphone
+  description: |
+    Captures PCM buffers from the on-board MSM261D3526 PDM microphone via the
+    Zephyr DMIC API, in mono and stereo configurations. nx40 only (nx15 has
+    no PDM microphone wired).
+tests:
+  sample.korlinx.micro_msm261d35:
+    tags: dmic
+    platform_allow:
+      - nx40/nrf52840
+    harness: console
+    harness_config:
+      type: multi_line
+      ordered: true
+      regex:
+        - "DMIC sample"
+        - "Exiting"

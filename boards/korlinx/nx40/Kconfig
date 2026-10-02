@@ -1,0 +1,13 @@
+# Copyright (c) 2026 Korlinx
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_NX40_UF2_1200BPS_TOUCH
+	bool "Reboot into the UF2 bootloader on a 1200 bps touch"
+	default y
+	depends on CDC_ACM_SERIAL_INITIALIZE_AT_BOOT
+	select UART_LINE_CTRL
+	help
+	  Reboot into the KORLINX nRF52 Bootloader (UF2 mode) when the host
+	  opens the USB CDC ACM console at 1200 bps and then closes it, the
+	  same "1200 bps touch" the Arduino IDE uses. The board writes 0x57 to
+	  GPREGRET, which the bootloader checks on reset.

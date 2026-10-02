@@ -1,0 +1,9 @@
+# build output
+build*/
+twister-out*/
+
+# editors / IDEs
+.vscode/
+.idea/
+*.swp
+*~

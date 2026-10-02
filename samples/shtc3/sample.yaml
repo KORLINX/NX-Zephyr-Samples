@@ -1,0 +1,16 @@
+sample:
+  name: SHTC3 temperature and humidity
+  description: |
+    Polls the on-board Sensirion SHTC3 (devicetree alias dht0) and prints
+    temperature and relative humidity once per second.
+tests:
+  sample.korlinx.shtc3:
+    harness: console
+    tags: sensors
+    platform_allow:
+      - nx15/nrf54l15/cpuapp
+      - nx40/nrf52840
+    harness_config:
+      type: one_line
+      regex:
+        - "[0-9A-Za-z_,+-.@]*: temp is (.*) °C humidity is (.*) %RH"

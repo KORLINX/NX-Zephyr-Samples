@@ -1,0 +1,20 @@
+sample:
+  name: LSM6DSL IMU
+  description: |
+    Reads accelerometer and gyroscope data from the on-board LSM6DSL over
+    I2C, first in data-ready trigger mode and then in polling mode.
+tests:
+  sample.korlinx.imu_lsm6d:
+    harness: console
+    tags: sensors
+    timeout: 15
+    platform_allow:
+      - nx15/nrf54l15/cpuapp
+      - nx40/nrf52840
+    harness_config:
+      type: multi_line
+      ordered: true
+      regex:
+        - "accel x:[-.0-9]* ms/2 y:[-.0-9]* ms/2 z:[-.0-9]* ms/2"
+        - "gyro x:[-.0-9]* rad/s y:[-.0-9]* rad/s z:[-.0-9]* rad/s"
+        - "trig_cnt:[0-9]*"

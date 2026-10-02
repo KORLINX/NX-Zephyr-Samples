@@ -1,0 +1,18 @@
+sample:
+  name: Hello console + RTT
+  description: |
+    Minimal bring-up sample that prints to the console (UART on nx15,
+    USB CDC on nx40) via printk and emits LOG messages that fan out to
+    both the UART console and SEGGER RTT.
+tests:
+  sample.korlinx.hello:
+    harness: console
+    platform_allow:
+      - nx15/nrf54l15/cpuapp
+      - nx40/nrf52840
+    harness_config:
+      type: multi_line
+      ordered: true
+      regex:
+        - "Korlinx NX hello sample"
+        - "printk tick #[0-9]+"

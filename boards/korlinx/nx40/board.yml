@@ -1,0 +1,6 @@
+board:
+  name: nx40
+  full_name: Korlinx NX (nRF52840)
+  vendor: korlinx
+  socs:
+    - name: nrf52840

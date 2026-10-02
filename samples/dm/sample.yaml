@@ -1,0 +1,14 @@
+sample:
+  name: nRF Distance Measurement (nrf_dm)
+  description: |
+    Distance measurement between two devices using the nrf_dm library over
+    the 2.4 GHz radio (RTT + MCPD). nx40 (nRF52840) only -- the nrf_dm library
+    is not prebuilt for nRF54L, so nx15 is unsupported. Flash two boards and
+    watch the estimated distance in the log.
+tests:
+  sample.korlinx.dm:
+    sysbuild: true
+    build_only: true
+    tags: bluetooth
+    platform_allow:
+      - nx40/nrf52840

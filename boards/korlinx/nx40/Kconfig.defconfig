@@ -1,0 +1,30 @@
+# Copyright (c) 2026 Korlinx
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_NX40
+
+config HW_STACK_PROTECTION
+	default ARCH_HAS_STACK_PROTECTION
+
+config USE_DT_CODE_PARTITION
+	default y
+
+source "boards/common/usb/Kconfig.cdc_acm_serial.defconfig"
+
+if CDC_ACM_SERIAL_INITIALIZE_AT_BOOT
+
+config CDC_ACM_SERIAL_MANUFACTURER_STRING
+	default "KORLINX"
+
+config CDC_ACM_SERIAL_PRODUCT_STRING
+	default "NX40 nRF52840"
+
+config CDC_ACM_SERIAL_VID
+	default 0x1209
+
+config CDC_ACM_SERIAL_PID
+	default 0x4E58
+
+endif # CDC_ACM_SERIAL_INITIALIZE_AT_BOOT
+
+endif # BOARD_NX40
