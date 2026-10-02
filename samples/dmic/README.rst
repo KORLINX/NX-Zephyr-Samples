@@ -1,4 +1,4 @@
-.. zephyr:code-sample:: korlinx_micro_msm261d35
+.. zephyr:code-sample:: korlinx_dmic
    :name: MSM261D3526 PDM microphone
    :relevant-api: audio_dmic_interface
 
@@ -28,7 +28,7 @@ From your nRF Connect SDK workspace, build and flash the sample:
 
 .. code-block:: console
 
-   west build -b nx40/nrf52840 <repo>/samples/micro_msm261d35 -- -DZEPHYR_EXTRA_MODULES=<repo>
+   west build -b nx40/nrf52840 <repo>/samples/dmic -- -DZEPHYR_EXTRA_MODULES=<repo>
    west flash
 
 ``<repo>`` is the path to this repository. The log starts with ``DMIC sample``

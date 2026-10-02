@@ -4,7 +4,7 @@ sample:
     Polls the on-board Sensirion SHTC3 (devicetree alias dht0) and prints
     temperature and relative humidity once per second.
 tests:
-  sample.korlinx.shtc3:
+  sample.korlinx.dht_polling:
     harness: console
     tags: sensors
     platform_allow:

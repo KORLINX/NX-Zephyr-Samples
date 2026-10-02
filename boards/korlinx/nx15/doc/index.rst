@@ -106,7 +106,7 @@ Debugging
 
    west debug
 
-Log output is available on the console UART and over SEGGER RTT.
+Log output is available on the console UART.
 
 References
 **********

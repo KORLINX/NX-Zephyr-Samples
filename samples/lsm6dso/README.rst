@@ -1,4 +1,4 @@
-.. zephyr:code-sample:: korlinx_imu_lsm6d
+.. zephyr:code-sample:: korlinx_lsm6dso
    :name: LSM6DSL IMU
    :relevant-api: sensor_interface
 
@@ -33,7 +33,7 @@ changing ``nx15/nrf54l15/cpuapp`` for your board:
 
 .. code-block:: console
 
-   west build -b nx15/nrf54l15/cpuapp <repo>/samples/imu_lsm6d -- -DZEPHYR_EXTRA_MODULES=<repo>
+   west build -b nx15/nrf54l15/cpuapp <repo>/samples/lsm6dso -- -DZEPHYR_EXTRA_MODULES=<repo>
    west flash
 
 ``<repo>`` is the path to this repository.

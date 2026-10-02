@@ -8,18 +8,18 @@ a [Zephyr module][modules] that provides:
   - [`nx15/nrf54l15/cpuapp`](boards/korlinx/nx15/doc/index.rst): NX15, nRF54L15
   - [`nx40/nrf52840`](boards/korlinx/nx40/doc/index.rst): NX40, nRF52840
 - Sample applications for the on-board peripherals and Bluetooth LE:
-  - [`hello`](samples/hello/README.rst): console and SEGGER RTT output
+  - [`hello`](samples/hello/README.rst): console output with printk and logging
   - [`uart`](samples/uart/README.rst): console UART heartbeat and echo
-  - [`shtc3`](samples/shtc3/README.rst): SHTC3 temperature and humidity sensor
-  - [`imu_lsm6d`](samples/imu_lsm6d/README.rst): LSM6DSL accelerometer and gyroscope
-  - [`micro_msm261d35`](samples/micro_msm261d35/README.rst): PDM microphone (NX40 only)
+  - [`dht_polling`](samples/dht_polling/README.rst): SHTC3 temperature and humidity sensor
+  - [`lsm6dso`](samples/lsm6dso/README.rst): IMU accelerometer and gyroscope
+  - [`dmic`](samples/dmic/README.rst): PDM microphone (NX40 only)
   - [`qspi_flash`](samples/qspi_flash/README.rst): external NOR flash test
   - [`gatt`](samples/gatt/README.rst): custom GATT service with notifications
-  - [`rssi_central`](samples/rssi_central/README.rst) and
-    [`rssi_peripheral`](samples/rssi_peripheral/README.rst): connection RSSI
-    and LE Power Control
-  - [`dm`](samples/dm/README.rst): distance measurement (NX40 only)
-  - [`dtm`](samples/dtm/README.rst): Bluetooth LE Direct Test Mode
+  - [`rssi_power_control`](samples/rssi_power_control): connection RSSI and
+    LE Power Control, with [`central`](samples/rssi_power_control/central/README.rst)
+    and [`peripheral`](samples/rssi_power_control/peripheral/README.rst) sides
+  - [`nrf_dm`](samples/nrf_dm/README.rst): distance measurement (NX40 only)
+  - [`direct_test_mode`](samples/direct_test_mode/README.rst): Bluetooth LE Direct Test Mode
 
 The samples are tested with nRF Connect SDK v3.3.1.
 
@@ -70,10 +70,6 @@ To build every sample for both boards with Twister, run:
 ```shell
 west twister -T <repo>/samples --build-only \
     -p nx15/nrf54l15/cpuapp -p nx40/nrf52840 \
-    --board-root <repo>/boards -x=ZEPHYR_EXTRA_MODULES=<repo> \
-    --disable-warnings-as-errors
+    --board-root <repo>/boards -x=ZEPHYR_EXTRA_MODULES=<repo>
 ```
-
-`--disable-warnings-as-errors` is needed because the NX40 samples use the
-legacy USB device stack, which is deprecated and triggers compiler warnings.
 

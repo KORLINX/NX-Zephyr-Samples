@@ -1,0 +1,12 @@
+sample:
+  name: RSSI and power control (peripheral)
+  description: |
+    The peripheral side of a two-board Bluetooth LE Power Control demonstration.
+tests:
+  sample.korlinx.rssi_power_control.peripheral:
+    sysbuild: true
+    build_only: true
+    tags: bluetooth
+    platform_allow:
+      - nx15/nrf54l15/cpuapp
+      - nx40/nrf52840

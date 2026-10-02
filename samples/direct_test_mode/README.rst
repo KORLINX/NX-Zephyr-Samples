@@ -1,4 +1,4 @@
-.. zephyr:code-sample:: korlinx_dtm
+.. zephyr:code-sample:: korlinx_direct_test_mode
    :name: Direct Test Mode
 
    Run Bluetooth LE Direct Test Mode (DTM) for RF testing over a two-wire UART.
@@ -25,8 +25,7 @@ The console is disabled. The DTM transport uses the UART selected by the
    * - ``nx40/nrf52840``
      - USB CDC ACM
 
-The ``boards/*.overlay`` files set these per board. Log output, if any, goes to
-SEGGER RTT.
+The ``boards/*.overlay`` files set these per board.
 
 Requirements
 ************
@@ -47,7 +46,7 @@ changing ``nx15/nrf54l15/cpuapp`` for your board:
 
 .. code-block:: console
 
-   west build -b nx15/nrf54l15/cpuapp <repo>/samples/dtm -- -DZEPHYR_EXTRA_MODULES=<repo>
+   west build -b nx15/nrf54l15/cpuapp <repo>/samples/direct_test_mode -- -DZEPHYR_EXTRA_MODULES=<repo>
    west flash
 
 ``<repo>`` is the path to this repository. Connect the tester to the DTM UART

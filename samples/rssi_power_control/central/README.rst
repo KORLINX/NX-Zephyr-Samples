@@ -1,4 +1,4 @@
-.. zephyr:code-sample:: korlinx_rssi_central
+.. zephyr:code-sample:: korlinx_rssi_power_control_central
    :name: RSSI and power control (central)
    :relevant-api: bluetooth
 
@@ -42,7 +42,7 @@ Requirements
   * ``nx15/nrf54l15/cpuapp``
   * ``nx40/nrf52840``
 
-* One board running this sample and one running ``rssi_peripheral``.
+* One board running this sample and one running ``rssi_power_control/peripheral``.
 
 This sample uses the nRF Connect SDK SoftDevice Controller and Bluetooth scan
 library, so it does not build with the Zephyr Bluetooth LE controller.
@@ -55,8 +55,8 @@ changing ``nx15/nrf54l15/cpuapp`` for your board:
 
 .. code-block:: console
 
-   west build -b nx15/nrf54l15/cpuapp <repo>/samples/rssi_central -- -DZEPHYR_EXTRA_MODULES=<repo>
+   west build -b nx15/nrf54l15/cpuapp <repo>/samples/rssi_power_control/central -- -DZEPHYR_EXTRA_MODULES=<repo>
    west flash
 
 ``<repo>`` is the path to this repository. Power the board running
-``rssi_peripheral``, then watch the log output on the console or over RTT.
+``rssi_power_control/peripheral``, then watch the log output on the console.

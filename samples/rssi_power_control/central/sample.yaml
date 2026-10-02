@@ -3,7 +3,7 @@ sample:
   description: |
     The central side of a two-board Bluetooth LE Power Control demonstration.
 tests:
-  sample.korlinx.rssi_central:
+  sample.korlinx.rssi_power_control.central:
     sysbuild: true
     build_only: true
     tags: bluetooth

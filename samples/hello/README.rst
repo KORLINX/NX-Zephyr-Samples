@@ -1,18 +1,18 @@
 .. zephyr:code-sample:: korlinx_hello
-   :name: Hello console and RTT
+   :name: Hello console
 
-   Print to the console and send log messages to both the console and SEGGER RTT.
+   Print to the console with printk and the logging subsystem.
 
 Overview
 ********
 
 A minimal bring-up sample for the Korlinx NX boards. It prints a banner with
 the board target, then once per second prints a ``printk`` tick and emits a
-``LOG_INF`` tick. Log messages go to both the UART console backend and the
-SEGGER RTT backend, so you can check both output paths at once.
+``LOG_INF`` tick. Both go to the board console.
 
-On ``nx40/nrf52840`` the console is USB CDC ACM. The sample enables USB and
-waits 2 seconds before its first print so the host can open the port.
+On ``nx40/nrf52840`` the console is USB CDC ACM, which the board starts at
+boot. Log messages are held for 4 seconds after boot so the host has time to
+open the port.
 
 Requirements
 ************
@@ -34,5 +34,4 @@ changing ``nx15/nrf54l15/cpuapp`` for your board:
    west flash
 
 ``<repo>`` is the path to this repository. Open a terminal on the console port
-to see the ``printk`` and log output, or connect an RTT viewer to see the log
-output only.
+to see the ``printk`` and log output.

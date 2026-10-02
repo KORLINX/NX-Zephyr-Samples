@@ -62,4 +62,4 @@ To test the sample:
 #. Find the service ``4b4f524c-0001-...`` and enable notifications on the
    counter characteristic.
 #. The counter value updates at the configured interval. The board logs each
-   notification on the console and over RTT.
+   notification on the console.

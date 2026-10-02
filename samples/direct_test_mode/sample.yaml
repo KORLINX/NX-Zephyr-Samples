@@ -1,9 +1,10 @@
 sample:
-  name: RSSI and power control (peripheral)
+  name: Direct Test Mode
   description: |
-    The peripheral side of a two-board Bluetooth LE Power Control demonstration.
+    Bluetooth LE Direct Test Mode over the two-wire UART interface
+    (19200 baud) for RF testing.
 tests:
-  sample.korlinx.rssi_peripheral:
+  sample.korlinx.direct_test_mode:
     sysbuild: true
     build_only: true
     tags: bluetooth

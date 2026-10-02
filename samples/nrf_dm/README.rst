@@ -1,4 +1,4 @@
-.. zephyr:code-sample:: korlinx_dm
+.. zephyr:code-sample:: korlinx_nrf_dm
    :name: Distance measurement
 
    Measure the distance between two boards with the nRF Distance Measurement
@@ -52,11 +52,11 @@ flash it to both boards:
 
 .. code-block:: console
 
-   west build -b nx40/nrf52840 <repo>/samples/dm -- -DZEPHYR_EXTRA_MODULES=<repo>
+   west build -b nx40/nrf52840 <repo>/samples/nrf_dm -- -DZEPHYR_EXTRA_MODULES=<repo>
    west flash
 
 ``<repo>`` is the path to this repository. Power both boards and watch the
-``Measurement result`` blocks on the console or over RTT.
+``Measurement result`` blocks on the console.
 
 References
 **********

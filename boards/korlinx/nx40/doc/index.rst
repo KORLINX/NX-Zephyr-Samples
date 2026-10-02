@@ -117,7 +117,7 @@ Debugging
 
    west debug
 
-Log output is available on the USB CDC ACM console and over SEGGER RTT.
+Log output is available on the USB CDC ACM console.
 
 References
 **********

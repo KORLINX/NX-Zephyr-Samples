@@ -6,7 +6,7 @@ sample:
     is not prebuilt for nRF54L, so nx15 is unsupported. Flash two boards and
     watch the estimated distance in the log.
 tests:
-  sample.korlinx.dm:
+  sample.korlinx.nrf_dm:
     sysbuild: true
     build_only: true
     tags: bluetooth

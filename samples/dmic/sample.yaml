@@ -5,7 +5,7 @@ sample:
     Zephyr DMIC API, in mono and stereo configurations. nx40 only (nx15 has
     no PDM microphone wired).
 tests:
-  sample.korlinx.micro_msm261d35:
+  sample.korlinx.dmic:
     tags: dmic
     platform_allow:
       - nx40/nrf52840

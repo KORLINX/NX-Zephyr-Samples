@@ -4,7 +4,7 @@ sample:
     Reads accelerometer and gyroscope data from the on-board LSM6DSL over
     I2C, first in data-ready trigger mode and then in polling mode.
 tests:
-  sample.korlinx.imu_lsm6d:
+  sample.korlinx.lsm6dso:
     harness: console
     tags: sensors
     timeout: 15

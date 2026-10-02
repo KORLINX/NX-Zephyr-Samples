@@ -1,4 +1,4 @@
-.. zephyr:code-sample:: korlinx_shtc3
+.. zephyr:code-sample:: korlinx_dht_polling
    :name: SHTC3 temperature and humidity
    :relevant-api: sensor_interface
 
@@ -32,7 +32,7 @@ changing ``nx15/nrf54l15/cpuapp`` for your board:
 
 .. code-block:: console
 
-   west build -b nx15/nrf54l15/cpuapp <repo>/samples/shtc3 -- -DZEPHYR_EXTRA_MODULES=<repo>
+   west build -b nx15/nrf54l15/cpuapp <repo>/samples/dht_polling -- -DZEPHYR_EXTRA_MODULES=<repo>
    west flash
 
 ``<repo>`` is the path to this repository.

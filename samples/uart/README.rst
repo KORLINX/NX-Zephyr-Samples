@@ -9,9 +9,7 @@ Overview
 
 This sample checks both directions of the board's console UART. Once per
 second it prints a ``uart alive #N`` heartbeat, and it echoes back every byte
-it receives, polling the UART every 10 ms.
-
-SEGGER RTT is disabled in this sample, so all output goes to the UART.
+it receives, using the interrupt-driven UART API for reception.
 
 Requirements
 ************

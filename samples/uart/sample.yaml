@@ -1,7 +1,7 @@
 sample:
   name: UART smoke test
   description: |
-    UART-only test (RTT disabled). Emits a TX heartbeat over the board
+    UART smoke test. Emits a TX heartbeat over the board
     console UART and echoes back any received bytes, so both directions of
     the UART can be verified with a serial terminal at 115200 8N1.
 tests:
