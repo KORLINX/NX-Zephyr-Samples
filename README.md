@@ -11,6 +11,7 @@ a [Zephyr module][modules] that provides:
   - [`hello`](samples/hello/README.rst): console output with printk and logging
   - [`uart`](samples/uart/README.rst): console UART heartbeat and echo
   - [`dht_polling`](samples/dht_polling/README.rst): SHTC3 temperature and humidity sensor
+  - [`shtc3`](samples/shtc3/README.rst): SHTC3 temperature and humidity with the blocking sensor API
   - [`lsm6dso`](samples/lsm6dso/README.rst): IMU accelerometer and gyroscope
   - [`dmic`](samples/dmic/README.rst): PDM microphone (NX40 only)
   - [`qspi_flash`](samples/qspi_flash/README.rst): external NOR flash test

@@ -1,0 +1,17 @@
+sample:
+  name: SHTC3 blocking read
+  description: |
+    Reads the on-board Sensirion SHTC3 (devicetree alias dht0) once per
+    second with the blocking sensor API and prints temperature and
+    relative humidity on the console (UART on nx15, USB CDC on nx40).
+tests:
+  sample.korlinx.shtc3:
+    harness: console
+    tags: sensors
+    platform_allow:
+      - nx15/nrf54l15/cpuapp
+      - nx40/nrf52840
+    harness_config:
+      type: one_line
+      regex:
+        - "#[0-9]+ temp: (.*) °C, humidity: (.*) %RH"
